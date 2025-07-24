@@ -1,0 +1,290 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap');
+
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', Helvetica, sans-serif;
+  background: url("hero-bg.jpg") no-repeat center center/cover fixed;
+  min-height: 100vh;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Bottom Gradient Overlay */
+.bottom-overlay {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 50vh;
+  background: linear-gradient(to top, rgba(255, 0, 0, 0.7), transparent);
+  z-index: -1;
+}
+
+/* HEADER */
+header {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* LOGO */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  cursor: pointer;
+}
+.logo-icon::before {
+  content: '</>';
+  background-color: red;
+  color: white;
+  font-size: 1.8rem;
+  font-weight: 700;
+  width: 3rem;
+  height: 3rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: 0.3s ease;
+}
+.logo-text {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: red;
+  font-family: 'Orbitron', sans-serif;
+}
+.logo:hover .logo-icon::before {
+  background-color: darkred;
+  transform: rotate(20deg);
+}
+
+/* NAVIGATION */
+nav {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+nav ul {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  transition: all 0.3s ease;
+}
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.2rem;
+  transition: 0.3s ease;
+}
+nav ul li a:hover {
+  color: red;
+}
+nav ul li button.login-btn {
+  background-color: red;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s ease;
+  font-size: 1rem;
+}
+nav ul li button.login-btn:hover {
+  background-color: darkred;
+}
+
+
+.menu-btn {
+  display: none;
+  background: none;
+  padding: 1rem;
+  border: none;
+  font-size: 2rem;
+  color: red;
+  cursor: pointer;
+}
+
+/* FORM CONTAINER */
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60%;
+  margin: 4rem auto;
+  min-height: 450px;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(10px);
+}
+
+/* FORM BOX */
+.form-box {
+  display: flex;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+/* LEFT IMAGE */
+.form-image {
+  flex: 1 1 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-image: url('login-img.jpg');
+  background-position: center;
+  background-size: cover;
+  padding: 2rem;
+  color: white;
+  filter: brightness(0.9);
+}
+.form-image h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+.form-image p {
+  font-size: 1.1rem;
+}
+
+/* RIGHT FORM */
+.content {
+  flex: 1 1 50%;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(12px);
+}
+.content h2 {
+  color: black;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+.content input {
+  padding: 0.8rem;
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid red;
+  margin: 0.8rem 0;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+.content input:focus {
+  outline: none;
+  border: 2px solid tomato;
+  box-shadow: 0 0 8px rgba(255, 0, 0, 0.5);
+}
+.content input::placeholder {
+  color: gray;
+}
+.content a {
+  display: inline-block;
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  color: red;
+  text-decoration: none;
+  font-weight: 600;
+}
+.content button[type="submit"] {
+  width: 100%;
+  background: linear-gradient(45deg, red, darkred);
+  color: white;
+  border: none;
+  padding: 0.8rem;
+  font-size: 1.2rem;
+  border-radius: 8px;
+  margin-top: 1.5rem;
+  transition: 0.3s ease;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+.content button[type="submit"]:hover {
+  background: linear-gradient(45deg, darkred, red);
+  transform: translateY(-2px);
+}
+.ask {
+  font-size: 1rem;
+  margin-top: 1rem;
+  text-align: center;
+}
+.ask a {
+  color: red;
+  font-weight: bold;
+}
+
+/* TABLET VIEW */
+@media (max-width: 1024px) {
+  .form-container {
+    width: 80%;
+  }
+  nav ul {
+    gap: 1.5rem;
+  }
+}
+
+/* MOBILE VIEW */
+@media (max-width: 768px) {
+  nav ul {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.9);
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 2rem;
+    gap: 2rem;
+    transform: translateX(100%); /* Hidden off-screen to the right */
+    transition: transform 0.4s ease-in-out;
+    z-index: 999;
+  }
+
+  nav ul.active-link {
+    transform: translateX(0); /* Slide in */
+  }
+
+  nav ul li a {
+    font-size: 1.5rem;
+    color: white;
+  }
+
+  nav ul li button.login-btn {
+    font-size: 1.2rem;
+    padding: 12px 25px;
+  }
+
+  .menu-btn {
+    display: block;
+    color: red;
+    z-index: 1000;
+  }
+
+  .form-container {
+    width: 90%;
+    margin: 1rem;
+    flex-direction: column;
+    min-height: auto;
+  }
+
+  .form-image {
+    display: none;
+  }
+}
